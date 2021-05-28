@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo
+  annotations:
+    config.kubernetes.io/function: |
+      container:
+        image: public.ecr.aws/viesure/kptfunctions/echo-resourcelist:0.0.1
+    config.kubernetes.io/local-config: "true"
+data:
+  "config": "config value 2"
